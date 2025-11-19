@@ -9,8 +9,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using WpfDemo2.Core.Models;
+using WpfDemo2;
 using WpfDemo2.Services;
+using WpfDemo2.ViewModels;
 
 namespace WpfDemo2.Views
 {

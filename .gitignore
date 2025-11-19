@@ -1,0 +1,17 @@
+bin/
+obj/
+.vs/
+*.suo
+*.user
+*.csproj.user
+*.userosscache
+*.sln.docstates
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bld/
+[Oo]ut/
+*.pdb
+*.dll
+*.exe

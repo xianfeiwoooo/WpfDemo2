@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using WpfDemo2.Core.Command;
 using WpfDemo2.Services;
-using WpfDemo2.ViewModels;
 
-namespace WpfDemo2.Core.Models
+namespace WpfDemo2.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
@@ -37,7 +37,7 @@ namespace WpfDemo2.Core.Models
         {
             _auth = auth;
             CaptchaCode = GenerateCaptcha();
-            LoginCommand = new RelayCommand(async () => await LoginAsync());
+            LoginCommand = new RelayCommand(LoginAsync);
             RefreshCaptchaCommand = new RelayCommand(() => CaptchaCode = GenerateCaptcha());
             ForgotPasswordCommand = new RelayCommand(() => LoginFailed?.Invoke("请联系管理员重置密码"));
             TogglePasswordVisibilityCommand = new RelayCommand(() => ShowPassword = !ShowPassword);
